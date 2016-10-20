@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+
+{%block titulo%}
+	Agregar Post
+{%endblock titulo%}
+
+{%block content%}
+<h1>Agregar Nuevo Post</h1>
+
+
+
+<div id="Formulario">
+
+	<form method="post" action=".">
+		{%csrf_token%}
+		{{form.as_p}}
+		<input class="btn btn-lg btn-info" type="submit" value="Guardar">
+	</form>
+
+</div>
+
+{%endblock content%}
